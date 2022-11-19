@@ -5,32 +5,74 @@
   <meta charset="utf-8">
   <link rel="shortcut icon" href="static/img/favicon.png" type="image/png">
   <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+  <style type="text/css">
+
+  .player {
+    width: 800px;
+    height: 600px;
+    box-shadow: 0 0 50px rgba(0,0,0,0.9);
+  }
+
+  .video-window {
+    width: 100%;
+    height: 90%
+  }
+
+  .first-background-line{
+    background-color:black;
+  }
+
+  .second-background-line{
+    background-color:white;
+  }
+
+  .third-background-line{
+    background-color:grey;
+  }
+
+  button.first-line {
+    border-style: none;
+    background-color: transparent;
+    cursor: pointer;
+    width: 100px;
+    height: 50px;
+  }
+
+  .icon-first-line {
+    color:white;
+  }
+
+  </style>
 
 </head>
 <body>
-  <div id="player" style="width: 800px; height: 600px;">
+  <div class="player" id="player">
 
-    <div class="js-video-container" style="width: 100%; height: 100%"></div>
-    <div style="background-color:black;">
-      <button class="js-play-button" style="border-style: none; cursor: pointer;
-      background-color:transparent">
-        <i class="fa fa-play" aria-hidden="true" style="color:white;" ></i>
+    <div class="video-window js-video-container"></div>
+    <div class="first-background-line">
+      <button class="first-line js-play-button">
+        <i class="icon-first-line fa fa-play fa-2x" aria-hidden="true"></i>
       </button>
-      <button class="js-pause-button" hidden style="border-style: none; cursor: pointer;
-      background-color:transparent">
-        <i class="fa fa-pause" aria-hidden="true" style="color:white;" ></i>
+      <button class="first-line js-pause-button" hidden >
+        <i class="icon-first-line fa fa-pause fa-2x" aria-hidden="true"></i>
       </button>
-      <button class="js-mute-button" style="border-style: none; cursor: pointer">Тишина</button>
-      <button class="js-volume-button" hidden>Volume</button>
-      <button class="js-fullscreen-button">Fullscreen</button>
+      <button class="first-line js-mute-button">
+        <i class="icon-first-line fa-first-line fa fa-volume-off fa-2x" aria-hidden="true"></i>
+      </button>
+      <button class="first-line js-volume-button" hidden>
+        <i class="icon-first-line fa fa-volume-up fa-2x" aria-hidden="true" ></i>
+      </button>
+      <button class="first-line js-fullscreen-button">
+        <i class="icon-first-line fa fa-arrows-alt fa-2x" aria-hidden="true"></i>
+      </button>
     </div>
 
-    <div style="color: white;">
+    <div class="second-background-line">
       <button class="js-current-time">Current-time</button>
       <button class="js-duration">Duration</button>
     </div>
 
-    <div class="js-progress" style="background-color: grey;">
+    <div class="third-background-line js-progress">
       <div class="js-progress-slider" style="background-color: red;">Прогресс</div>
     </div>
   </div>
