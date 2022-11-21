@@ -2,7 +2,7 @@
 
 Это учебный видеоплеер созданный для изучения верстки.
 
-![max example](screenshots/presentation.mp4)
+![max example](screenshots/presentation.gif)
 
 Построен на базе библиотеки [Playable](https://wix.github.io/playable/).
 ## Запуск:
