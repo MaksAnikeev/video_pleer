@@ -1,6 +1,10 @@
 # Видеоплеер
 
 Это учебный видеоплеер созданный для изучения верстки.
+
+![max example](screenshots/presentation.gif)
+
+Построен на базе библиотеки [Playable](https://wix.github.io/playable/).
 ## Запуск:
 
 Для просмотра работы видеоплеера нажмите [демо видеоплеера](https://maksanikeev.github.io/video_pleer/)
