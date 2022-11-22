@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
   <style type="text/css">
 
-  .player {
+  .video-player {
     width: 800px;
     height: 600px;
     box-shadow: 0 0 50px rgba(0,0,0,0.9);
@@ -15,65 +15,65 @@
     flex-direction: column;
   }
 
-  .video-window {
+  .video-player__window {
     flex-grow: 1;
   }
 
-  .first-background-line{
+  .video-player__controls{
     background-color:black;
     display: flex;
-    flex-grow: 0;
+    align-items: center;
   }
 
-  .second-background-line{
+  .video-player__progress_bar{
     background-color:black;
     height: 20px;
-    flex-grow: 0;
   }
 
-  .progress{
+  .video-player__progress_line{
     background-color: white;
   }
 
-  button.first-line {
+  .video-player__button {
     border-style: none;
     background-color: transparent;
     cursor: pointer;
     width: 50px;
     height: 50px;
-    flex-grow: 0
-  }
-
-  .icon-first-line {
     color:white;
   }
+
+  .video-player__button_empty{
+    flex-grow: 1;
+  }
+
   </style>
 </head>
 
 <body>
-  <div class="player" id="player">
+  <div class="video-player" id="player">
 
-    <div class="video-window js-video-container"></div>
-    <div class="first-background-line">
-      <button class="first-line js-play-button">
-        <i class="icon-first-line fa fa-play fa-2x" aria-hidden="true"></i>
+    <div class="video-player__window js-video-container"></div>
+    <div class="video-player__controls">
+      <button class="video-player__button js-play-button">
+        <i class="fa fa-play fa-2x" aria-hidden="true"></i>
       </button>
-      <button class="first-line js-pause-button" hidden >
-        <i class="icon-first-line fa fa-pause fa-2x" aria-hidden="true"></i>
+      <button class="video-player__button js-pause-button" hidden >
+        <i class="fa fa-pause fa-2x" aria-hidden="true"></i>
       </button>
-      <button class="first-line js-mute-button">
-        <i class="icon-first-line fa fa-volume-up fa-2x"></i>
+      <button class="video-player__button js-mute-button">
+        <i class="fa fa-volume-up fa-2x"></i>
       </button>
-      <button class="first-line js-volume-button" hidden>
-        <i class="icon-first-line fa-first-line fa fa-volume-off fa-2x" aria-hidden="true" ></i>
+      <button class="video-player__button js-volume-button" hidden>
+        <i class="fa-first-line fa fa-volume-off fa-2x" aria-hidden="true" ></i>
       </button>
-      <div style="flex-grow: 5"></div>
-      <button class="first-line js-fullscreen-button">
-        <i class="icon-first-line fa fa-arrows-alt fa-2x" aria-hidden="true"></i>
+      <div class="video-player__button_empty"></div>
+      <button class="video-player__button js-fullscreen-button">
+        <i class="fa fa-arrows-alt fa-2x" aria-hidden="true"></i>
       </button>
     </div>
-      <div class="second-background-line js-progress">
-        <div class="progress js-progress-slider">Прогресс</div>
+      <div class="video-player__progress_bar js-progress">
+        <div class="video-player__progress_line js-progress-slider">Прогресс</div>
     </div>
   </div>
 
