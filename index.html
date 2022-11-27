@@ -3,13 +3,14 @@
 <head>
   <title>Видеоплеер</title>
   <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <link rel="shortcut icon" href="static/img/favicon.png" type="image/png">
   <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
   <style type="text/css">
 
   .video-player {
-    width: 800px;
-    height: 600px;
+    width: 640px;
+    height: 480px;
     box-shadow: 0 0 50px rgba(0,0,0,0.9);
     display: flex;
     flex-direction: column;
@@ -28,6 +29,7 @@
   .video-player__progress_bar{
     background-color:black;
     height: 20px;
+    flex-grow: 1;
   }
 
   .video-player__progress_line{
@@ -38,13 +40,17 @@
     border-style: none;
     background-color: transparent;
     cursor: pointer;
-    width: 50px;
-    height: 50px;
+    width: 29px;
+    height: 32px;
     color:white;
+    flex-grow: 0;
   }
 
-  .video-player__button_empty{
-    flex-grow: 1;
+  .video-player__duration{
+    color:white;
+    font-family: 'Roboto', sans-serif;
+    width: 65px;
+    text-align: center;
   }
 
   </style>
@@ -56,25 +62,32 @@
     <div class="video-player__window js-video-container"></div>
     <div class="video-player__controls">
       <button class="video-player__button js-play-button">
-        <i class="fa fa-play fa-2x" aria-hidden="true"></i>
+        <i class="fa fa-play fa-1x" aria-hidden="true"></i>
       </button>
       <button class="video-player__button js-pause-button" hidden >
-        <i class="fa fa-pause fa-2x" aria-hidden="true"></i>
+        <i class="fa fa-pause fa-1x" aria-hidden="true"></i>
       </button>
       <button class="video-player__button js-mute-button">
-        <i class="fa fa-volume-up fa-2x"></i>
+        <i class="fa fa-volume-up fa-1x"></i>
       </button>
       <button class="video-player__button js-volume-button" hidden>
-        <i class="fa-first-line fa fa-volume-off fa-2x" aria-hidden="true" ></i>
+        <i class="fa-first-line fa fa-volume-off fa-1x" aria-hidden="true" ></i>
       </button>
-      <div class="video-player__button_empty"></div>
-      <button class="video-player__button js-fullscreen-button">
-        <i class="fa fa-arrows-alt fa-2x" aria-hidden="true"></i>
-      </button>
-    </div>
+
+      <span class="video-player__duration js-current-time"></span>
+
       <div class="video-player__progress_bar js-progress">
         <div class="video-player__progress_line js-progress-slider">Прогресс</div>
+      </div>
+
+      <span class="video-player__duration js-duration"></span>
+
+
+      <button class="video-player__button js-fullscreen-button">
+        <i class="fa fa-expand fa-1x" aria-hidden="true"></i>
+      </button>
     </div>
+
   </div>
 
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
