@@ -28,13 +28,30 @@
 
   .video-player__progress_bar{
     background-color:black;
-    height: 20px;
+    height: 6px;
     flex-grow: 1;
     margin-left: 10px;
+    display: flex;
+    align-items: center;
   }
 
   .video-player__progress_line{
-    background-color: white;
+    background-color: red;
+    border-radius: 50px;
+    height: 4px;
+    flex-grow: 0;
+  }
+
+  .dot {
+    height: 5px;
+    width: 5px;
+    background-color: red;
+    border-radius: 50%;
+    display: inline-block;
+    border-style: solid;
+    border-width: 3px;
+    border-color: white;
+    flex-grow: 0;
   }
 
   .video-player__button {
@@ -53,6 +70,7 @@
     font-size:13px;
     flex-grow: 0;
   }
+
 
   </style>
 </head>
@@ -78,7 +96,8 @@
       <span class="video-player__duration js-current-time"></span>
 
       <div class="video-player__progress_bar js-progress">
-        <div class="video-player__progress_line js-progress-slider">Прогресс</div>
+        <div class="video-player__progress_line js-progress-slider"></div>
+        <span class="dot"></span>
       </div>
 
       <span class="video-player__duration js-duration"></span>
@@ -87,6 +106,7 @@
       <button class="video-player__button js-fullscreen-button">
         <i class="fa fa-expand fa-1x" aria-hidden="true"></i>
       </button>
+
     </div>
 
   </div>
