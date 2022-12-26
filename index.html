@@ -6,95 +6,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <link rel="shortcut icon" href="static/img/favicon.png" type="image/png">
   <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
-  <style>
-
-  .video-player {
-    width: 640px;
-    height: 480px;
-    box-shadow: 0 0 50px rgba(0,0,0,0.9);
-    display: flex;
-    flex-direction: column;
-  }
-
-  .video-player__window {
-    flex-grow: 1;
-  }
-
-  .video-player__controls{
-    background-color:black;
-    display: flex;
-    align-items: center;
-  }
-
-  .video-player__progress_bar{
-    background-color:black;
-    height: 6px;
-    flex-grow: 1;
-    margin-left: 10px;
-    display: flex;
-    align-items: center;
-  }
-
-  .video-player__progress_line{
-    background-color: red;
-    border-radius: 50px;
-    height: 4px;
-    flex-grow: 0;
-  }
-
-  .dot {
-    height: 5px;
-    width: 5px;
-    background-color: red;
-    border-radius: 50%;
-    display: inline-block;
-    border-style: solid;
-    border-width: 3px;
-    border-color: white;
-    flex-grow: 0;
-    opacity: 0;
-    margin-left: -5px;
-    transition-property: all;
-    transition-timing-function: ease-out;
-    transition-duration: .5s;
-  }
-
-  .video-player__controls:hover .dot{
-    height: 5px;
-    width: 5px;
-    background-color: red;
-    border-radius: 50%;
-    display: inline-block;
-    border-style: solid;
-    border-width: 3px;
-    border-color: white;
-    flex-grow: 0;
-    opacity: 1;
-    margin-left: -5px;
-    transition-duration: .5s;
-    transition-timing-function: ease-in;
-  }
-
-  @import "normalize.css";
-  .video-player__button {
-    border-style: none;
-    background-color: transparent;
-    cursor: pointer;
-    width: 29px;
-    height: 32px;
-    color:white;
-    flex-grow: 0;
-  }
-
-  .video-player__duration{
-    color:white;
-    font-family: 'Roboto', sans-serif;
-    font-size:13px;
-    flex-grow: 0;
-  }
-
-
-  </style>
+  <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
@@ -103,30 +15,30 @@
     <div class="video-player__window js-video-container"></div>
     <div class="video-player__controls">
       <button class="video-player__button js-play-button">
-        <i class="fa fa-play fa-1x" aria-hidden="true"></i>
+        <i class="fa fa-play fa-lg" aria-hidden="true"></i>
       </button>
       <button class="video-player__button js-pause-button" hidden >
-        <i class="fa fa-pause fa-1x" aria-hidden="true"></i>
+        <i class="fa fa-pause fa-lg" aria-hidden="true"></i>
       </button>
       <button class="video-player__button js-mute-button">
-        <i class="fa fa-volume-up fa-1x"></i>
+        <i class="fa fa-volume-up fa-lg"></i>
       </button>
       <button class="video-player__button js-volume-button" hidden>
-        <i class="fa-first-line fa fa-volume-off fa-1x" aria-hidden="true" ></i>
+        <i class="fa-first-line fa fa-volume-off fa-lg" aria-hidden="true" ></i>
       </button>
 
-      <span class="video-player__duration js-current-time"></span>
 
-      <div class="video-player__progress_bar js-progress">
-        <div class="video-player__progress_line js-progress-slider"></div>
-        <span class="dot"></span>
+      <div class="video-player__progress_bar">
+        <span class="video-player__duration js-current-time"></span>
+        <div class="video-player__progress_bar js-progress">
+          <div class="video-player__progress_line js-progress-slider"></div>
+          <span class="dot"></span>
+        </div>
+        <span class="video-player__duration js-duration"></span>
       </div>
 
-      <span class="video-player__duration js-duration"></span>
-
-
       <button class="video-player__button js-fullscreen-button">
-        <i class="fa fa-expand fa-1x" aria-hidden="true"></i>
+        <i class="fa fa-expand fa-lg" aria-hidden="true"></i>
       </button>
 
     </div>
