@@ -45,13 +45,13 @@
   border-color: white;
   flex-grow: 0;
   opacity: 0;
-  margin-left: -5px;
+  margin-left: -10px;
   transition-property: all;
   transition-timing-function: ease-out;
   transition-duration: .5s;
 }
 
-.video-player__controls:hover .dot{
+.video-player__progress_bar:hover .dot{
   height: 7px;
   width: 7px;
   background-color: red;
@@ -62,7 +62,7 @@
   border-color: white;
   flex-grow: 0;
   opacity: 1;
-  margin-left: -5px;
+  margin-left: -10px;
   transition-duration: .5s;
   transition-timing-function: ease-in;
 }
